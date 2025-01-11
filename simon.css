@@ -1,0 +1,180 @@
+/* General Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jersey+10&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body {
+    font-family: "Bebas Neue";
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle, #3a3a3a, #0d0d0d);
+    /* background: radial-gradient(circle, #1e1e1e, #000); */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 220px;
+    left: 50px;
+    height: 220px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.circle:hover {
+    transform: scale(1.05);
+}
+
+/* Quadrants */
+.quadrant {
+    cursor: pointer;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.2s ease-in-out;
+}
+
+.quadrant:hover {
+    transform: scale(1.1);
+}
+
+.red {
+    background-color: rgb(196, 12, 12);
+    clip-path: polygon(50% 50%, 100% 0%, 100% 100%);
+}
+
+.blue {
+    background-color: rgb(10, 10, 156);
+    clip-path: polygon(50% 50%, 100% 100%, 0% 100%);
+}
+
+.green {
+    background-color: rgb(17, 121, 17);
+    clip-path: polygon(50% 50%, 0% 100%, 0% 0%);
+}
+
+.yellow {
+    background-color: rgb(205, 205, 14);
+    clip-path: polygon(50% 50%, 0% 0%, 100% 0%);
+}
+
+/* Center Button */
+.centre {
+    position: absolute;
+    left: 58px;
+    top: 58px;
+    width: 104px;
+    height: 104px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #f0f0f0, #d9d9d9);
+    box-shadow: inset 2px 2px 5px #bababa, inset -2px -2px 5px #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centre span {
+    color: #333;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.result {
+    padding: 30px;
+    color: #f0c674;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Info Section */
+.btn{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+.info {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+}
+
+.score,
+.highest {
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+.score:hover,
+.highest:hover {
+    color: #f0c674;
+}
+
+/* Quit Button */
+.play-again{
+    margin-top: 20px;
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+.quit {
+    margin-top: 20px;
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.play-again:hover ,.quit:hover {
+    background: linear-gradient(90deg, #f0c674, #ffc107);
+    color: black;
+    border-color: #ffc107;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+}
+
+.circle:hover .centre {
+    animation: pulse 2s infinite;
+}
+
+
