@@ -1,4 +1,4 @@
-#Simon Game 🎮🧠
+Simon Game 🎮🧠
 A fun and interactive memory game built with HTML, CSS, and JavaScript! This project is inspired by the classic Simon game, where users test their ability to remember and replicate sequences of colors. The game gets progressively harder as the sequence grows longer with every correct round.
 
 Features ✨
